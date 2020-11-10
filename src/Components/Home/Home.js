@@ -3,6 +3,7 @@ import Product from "../Product/Product";
 import ProductRow from "../ProductRow/ProductRow";
 import "./Home.css";
 import Footer from "../Footer/Footer";
+import wallpaper from "../Images/eshop_wallpaper.jpg";
 
 
 const Home = () => {
@@ -12,7 +13,7 @@ const Home = () => {
                 <img 
                     alt=""
                     className="home__image"
-                    src="https://images-eu.ssl-images-amazon.com/images/G/31/img19/AmazonPay/Rajeshwari/September/GWBanners/Control/DesktopHero_1500x600._CB405007888_.jpg"
+                    src={wallpaper}
                 />
             </div>
 

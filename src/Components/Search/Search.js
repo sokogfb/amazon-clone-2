@@ -1,10 +1,9 @@
 import React from "react";
-import Product from "../Product/Product";
 import ProductRow from "../ProductRow/ProductRow";
 import {useStateValue} from "../../StateProvider";
 import "./Search.css";
 import Footer from "../Footer/Footer";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 const Search = () => {
@@ -21,71 +20,61 @@ const Search = () => {
                 />
             </div> */}
 
-            
+
             {
                 searchQuery === "all"
-                ?
-                (   
-                    <div>
-                        <ProductRow category="electronics" />
-                        <ProductRow category="jewelery" />
-                        <ProductRow category="men clothing" />
-                        <ProductRow category="women clothing" />
-                    </div>
-                )
-                :
-                (
-                    searchQuery === "electronics"
                     ?
                     (
                         <div>
-                            <ProductRow category="electronics" />
+                            <ProductRow category="electronics"/>
+                            <ProductRow category="jewelery"/>
+                            <ProductRow category="men clothing"/>
+                            <ProductRow category="women clothing"/>
+                            <ProductRow category="Buiding Materials"/>
+                            <ProductRow category="Cement"/>
+                            <ProductRow category="Builder & Brick Layer"/>
+                            <ProductRow category="Metal Fabrication & Welding"/>
+                            <ProductRow category="Electrical Services"/>
+                            <ProductRow category="Plumbing"/>
+                            <ProductRow category="Tailoring & Clothing"/>
+                            <ProductRow category="Ceiling & Tile Fixing"/>
                         </div>
                     )
                     :
                     (
-                        searchQuery === "jewelery"
-                            ?
-                            (
-                                <div>
-                                    <ProductRow category="jewelery" />
-                                </div>
-                            )
-                            :
-                            (
-                                searchQuery === "men clothing"
-                                ?
-                                (
-                                    <div>
-                                        <ProductRow category="men clothing" />
-                                    </div>
-                                )
-                                :
-                                (
-                                    searchQuery === "women clothing"
-                                    ?
-                                    (
+                        searchQuery === "electronics" ? (<div><ProductRow category="electronics"/></div>) :
+                            (searchQuery === "jewelery" ? (
                                         <div>
-                                            <ProductRow category="women clothing" />
+                                            <ProductRow category="jewelery"/>
                                         </div>
+                                    ) :
+                                    (searchQuery === "men clothing" ? (
+                                                <div><ProductRow category="men clothing"/></div>) :
+                                            (searchQuery === "women clothing" ? (
+                                                    <div>
+                                                        <ProductRow category="women clothing"/>
+                                                    </div>
+                                                ) : (
+                                                    <div className="orders__error">
+                                                        <h2 className="orders__errorHeading">Not able to find
+                                                            result! Section under Development</h2>
+                                                        <div>
+                                                            <Link to="/">
+                                                                <button className="orders__amzStyleButton">Back To
+                                                                    Home
+                                                                </button>
+                                                            </Link>
+                                                        </div>
+                                                    </div>
+                                                )
+                                            )
                                     )
-                                    :
-                                    (
-                                        <div className="orders__error">
-                                            <h2 className="orders__errorHeading">Not able to find result! Section under Development</h2>
-                                            <div>
-                                                <Link to="/"><button className="orders__amzStyleButton">Back To Home</button></Link>
-                                            </div>
-                                        </div>
-                                    )
-                                )
                             )
                     )
-                )
             }
 
-            
-            <Footer hideBackToTop={true} />
+
+            <Footer hideBackToTop={true}/>
         </div>
     )
 }

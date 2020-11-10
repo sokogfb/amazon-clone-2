@@ -52,13 +52,43 @@
 }
 
 .footer__copyright {
-    color:gray;
+    color :gray;
     display: flex;
     justify-content: center;
-    padding: 10px 0px;
+    padding: 10px 10px;
     background-color:rgba(35, 47, 62,0.2);
 }
+.footer__year{
+    color:white;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
+}
+.footer__company{
+    color:white;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
+}
+.powered_by_word{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
+}
 
+.footer__poweredby{
+    color:red;
+    display: flex;
+    justify-content: center;
+    padding: 5px 5px;
+}
+
+.footer__poweredby_link{
+    color:red;
+    display: flex;
+    justify-content: center;
+}
 
 @media only screen and (max-width: 650px) {
     .footer__main {
@@ -71,3 +101,22 @@
         margin: auto;
     }
 }
+/* unvisited link */
+a:link {
+    color: green;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: red;
+  }
+  
+  /* selected link */
+  a:active {
+    color: yellow;
+  }

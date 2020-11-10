@@ -5,6 +5,7 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import {useStateValue} from "../../StateProvider";
 import "./Header.css";
 import { auth } from "../../firebase.js";
+import logo from "../Logo/logo.jpg";
 
 const Header = () => {
 
@@ -42,7 +43,7 @@ const Header = () => {
             <Link to="/">
                 <img
                     className="header__logo"
-                    src="http://pngimg.com/uploads/amazon/amazon_PNG11.png"
+                    src={ logo }
                 />
             </Link>
 

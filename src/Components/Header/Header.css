@@ -2,7 +2,7 @@
     min-height: 60px;
     display: flex;
     align-items: center;
-    background-color: #131921;
+    background-color:#232935;
     flex-wrap: wrap;
     position: fixed;
     z-index: 3;
@@ -31,7 +31,7 @@
     border-right:0.5px solid grey;
     outline-width: 0;
     height: 28px;
-    width: 45px;
+    width: 400px;
 }
 
 .header__searchIcon {
